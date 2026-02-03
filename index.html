@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Organization Registration</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card card--login" aria-label="Login form">
+    <div class="logo">
+		<img src="assets/logos/logo.png" alt="Panpacific University Logo" />
+	</div>
+
+      <h1 class="title title--center">
+        Student Organization<br />
+        Registration
+      </h1>
+
+      <form class="form" action="#" method="post">
+        <label class="label label--upper" for="email">EMAIL</label>
+        <input id="email" class="input" type="email" placeholder="you@panpacificu.edu.ph" autocomplete="email" />
+
+        <label class="label label--upper" for="password">PASSWORD</label>
+        <input id="password" class="input" type="password" placeholder="password" autocomplete="current-password" />
+
+        <div class="actions actions--wide">
+          <button class="btn btn--green" type="button">LOG IN</button>
+
+          <!-- Go to signup page -->
+          <a class="btn btn--navy" href="sign-up.html" role="button">SIGN UP</a>
+        </div>
+
+        <a class="link-center" href="#">Forgot password?</a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

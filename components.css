@@ -1,0 +1,136 @@
+/* Card (shared) */
+.card{
+  width: min(92vw, 560px);
+  background: var(--card);
+  border-radius: clamp(18px, 3vw, 28px);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3.5vw, 28px) clamp(18px, 4.5vw, 42px) clamp(20px, 4.5vw, 34px);
+}
+
+/* Logo block (used on login page) */
+.logo{
+  width: clamp(88px, 16vw, 120px);
+  height: clamp(88px, 16vw, 120px);
+  margin: 0 auto clamp(14px, 2.2vw, 18px);
+  background: #fff;
+  border-radius: clamp(18px, 3.2vw, 26px);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 22px rgba(0,0,0,.10);
+  overflow: hidden; /* keeps logo inside rounded box */
+}
+
+/* logo image itself */
+.logo img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* no stretching */
+  display: block;
+}
+
+
+/* Titles */
+.title{
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 clamp(16px, 3vw, 26px);
+  font-size: clamp(24px, 4.6vw, 40px);
+}
+.title--center{ text-align: center; }
+.title--left{ text-align: left; }
+
+/* Forms */
+.form{
+  width: min(92%, 430px);
+  margin: 0 auto;
+}
+
+.form--stack{
+  display: grid;
+  gap: clamp(14px, 2.6vw, 18px);
+}
+
+/* Field group */
+.field{
+  display: grid;
+  gap: clamp(6px, 1.4vw, 8px);
+}
+
+/* Labels */
+.label{
+  display: block;
+  text-align: left;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 700;
+}
+
+/* Inputs */
+.input{
+  width: 100%;
+  height: clamp(42px, 6vw, 52px);
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 0 clamp(14px, 2.6vw, 18px);
+  font-size: clamp(14px, 2.2vw, 18px);
+  background: var(--input-gray);
+  color: #000;
+}
+
+.input:focus{
+  box-shadow: 0 0 0 4px rgba(47,127,0,.18);
+}
+
+/* Dark inputs (signup image uses dark gray with white text) */
+.input--dark{
+  background: var(--input-dark);
+  color: #fff;
+}
+.input--dark::placeholder{
+  color: rgba(255,255,255,.92);
+}
+
+/* Buttons (works for <button> and <a>) */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: clamp(9px, 2vw, 12px) clamp(16px, 3.5vw, 26px);
+  font-weight: 900;
+  letter-spacing: .8px;
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(0,0,0,.14);
+  transition: filter .15s ease, transform .08s ease;
+  user-select: none;
+}
+
+.btn:hover{ filter: brightness(1.06); }
+.btn:active{ transform: translateY(1px); }
+
+.btn--green{ background: var(--green); }
+.btn--navy{ background: var(--navy); }
+
+/* Links */
+.link-center{
+  display: block;
+  text-align: center;
+  margin-top: clamp(12px, 2.4vw, 16px);
+  font-size: clamp(13px, 2.2vw, 16px);
+  color: #111;
+  text-decoration: none;
+}
+.link-center:hover{ text-decoration: underline; }
+
+.link-left{
+  display: inline-block;
+  margin-top: clamp(6px, 1.8vw, 10px);
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link-left:hover{ text-decoration: underline; }

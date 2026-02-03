@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body class="dashboard-body">
+  <div class="dash">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Student navigation">
+      <h2 class="sidebar__title">Welcome Student!</h2>
+
+      <!-- Profile placeholder (customizable later) -->
+      <div class="profile">
+        <div class="profile__avatar" aria-hidden="true">
+          <!-- Put your profile image later:
+               <img src="assets/profile.png" alt="Profile" />
+          -->
+        </div>
+        <div class="profile__name" id="studentName">NAME</div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__link" href="#">Registered Organization</a>
+        <a class="nav__link" href="#">Student Organization Registration Form</a>
+        <a class="nav__link" href="#">Uploaded Documents</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" aria-label="Dashboard content">
+      <header class="main__header">
+        <h1 class="main__title">DASHBOARD</h1>
+      </header>
+
+      <section class="top-grid">
+        <!-- Application Status -->
+        <article class="panel panel--status" aria-label="Application Status">
+          <h3 class="panel__title panel__title--center">Application Status</h3>
+
+          <div class="status">
+            <!-- Each icon placeholder is same size for consistent layout -->
+            <div class="status__item">
+              <div class="status__icon status__icon--pending" aria-hidden="true">
+                <!-- Custom icon later:
+                     <img src="assets/icons/pending.svg" alt="" />
+                -->
+              </div>
+              <div class="status__label">Pending</div>
+            </div>
+
+            <div class="status__item">
+              <div class="status__icon status__icon--progress" aria-hidden="true">
+                <!-- Custom icon later -->
+              </div>
+              <div class="status__label">In-Progress</div>
+            </div>
+
+            <div class="status__item">
+              <div class="status__icon status__icon--complete" aria-hidden="true">
+                <!-- Custom icon later -->
+              </div>
+              <div class="status__label">Complete</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Announcements -->
+        <article class="panel panel--announcements" aria-label="Announcements and notices">
+          <h3 class="panel__title">Announcements/Notices:</h3>
+
+          <!-- Admin will populate later; we provide a front-end placeholder list -->
+          <ul class="announce" id="announcementsList" aria-live="polite">
+            <!-- JS will render announcements here -->
+          </ul>
+
+          <div class="empty-hint" id="announcementsEmpty">
+            No announcements yet.
+          </div>
+        </article>
+      </section>
+
+      <!-- Downloadable files -->
+      <section class="panel panel--downloads" aria-label="Downloadable files">
+        <h3 class="panel__title">Downloadable Files:</h3>
+
+        <div class="downloads" id="downloadsList">
+          <!-- JS will render file cards here -->
+        </div>
+
+        <div class="empty-hint" id="downloadsEmpty">
+          No files available yet.
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

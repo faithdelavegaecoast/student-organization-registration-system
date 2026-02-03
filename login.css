@@ -1,0 +1,33 @@
+/* Login card wants the logo and centered title */
+.card--login{
+  width: min(92vw, 560px);
+}
+
+/* Add vertical breathing room between fields on login page */
+.card--login .input{
+  margin-bottom: clamp(12px, 2.4vw, 18px);
+}
+
+/* Buttons are far apart on larger screens like the mock */
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(14px, 2.8vw, 22px);
+}
+
+/* Wider gap like your design; will collapse on small screens */
+.actions--wide{
+  gap: clamp(16px, 6vw, 72px);
+}
+
+/* Small phones: stack buttons so it always fits */
+@media (max-width: 360px){
+  .actions--wide{
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .actions--wide .btn{
+    width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+.card--signup{
+  width: min(92vw, 560px);
+}
+
+/* In the image, the SIGN UP button sits bottom-right */
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: clamp(8px, 2vw, 14px);
+}
+
+/* Very small phones: center button for better fit */
+@media (max-width: 360px){
+  .footer{
+    justify-content: center;
+  }
+  .footer .btn{
+    width: 100%;
+  }
+}
