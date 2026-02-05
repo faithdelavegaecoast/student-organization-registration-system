@@ -1,0 +1,89 @@
+/* Keep the form aligned like your mock (left side, not huge width) */
+.form-area{
+  max-width: 980px;
+}
+
+/* org-form */
+.org-form{
+  width: min(92%, 520px);
+}
+
+.org-form .field{
+  gap: 0;
+}
+
+.org-form .label{
+  margin-bottom: 0;
+}
+
+.org-form .input{
+  margin-bottom: 16px;
+}
+
+/* Upload section title */
+.upload-title{
+  margin: 34px 0 14px;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 900;
+}
+
+/* Upload row */
+.upload-row{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* hide default file input; we'll trigger it from button */
+.file-input{
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* button style matches your mock: grey rectangle */
+.upload-btn{
+  border: none;
+  cursor: pointer;
+  background: #bdbdbd;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .4px;
+  padding: 10px 18px;
+  min-width: 180px;
+  border-radius: 2px;
+}
+
+.upload-btn:hover{
+  filter: brightness(1.05);
+}
+
+/* Selected files list */
+.file-list{
+  margin: 12px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: #222;
+  font-size: 14px;
+}
+
+/* Footer button placement (same as Sign Up page) */
+.form-footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+/* Small screens: center the button */
+@media (max-width: 360px){
+  .form-footer{
+    justify-content: center;
+  }
+
+  .form-footer .btn{
+    width: 100%;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Organization Registration Form</title>
+
+  <!-- same base/shared styles as your earlier pages -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- reuse the SAME layout styling from your dashboard page -->
+  <link rel="stylesheet" href="css/dashboard.css" />
+
+  <!-- only what is unique to this form -->
+  <link rel="stylesheet" href="css/student-form.css" />
+</head>
+
+<body class="dashboard-body">
+  <div class="dash">
+    <!-- LEFT SIDE PANEL (same as dashboard) -->
+    <aside class="sidebar" aria-label="Student navigation">
+      <h2 class="sidebar__title">Welcome Student!</h2>
+
+      <div class="profile">
+        <div class="profile__avatar" aria-hidden="true">
+          <!-- Leave blank for now; add later:
+          <img src="assets/logos/profile.png" alt="Profile" />
+          -->
+        </div>
+        <div class="profile__name" id="studentName">NAME</div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__link" href="dashboard.html">Dashboard</a>
+        <a class="nav__link" href="registered.html">Registered Organization</a>
+
+        <!-- active item -->
+        <a class="nav__link is-active" href="student-form.html">
+          Student Organization Registration Form
+        </a>
+
+        <a class="nav__link" href="#">Uploaded Documents</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" aria-label="Student Organization Registration Form">
+      <header class="main__header">
+        <h1 class="main__title">Register Organization</h1>
+      </header>
+
+      <section class="form-area">
+        <form class="org-form" id="orgForm" action="#" method="post">
+          <div class="field">
+            <label class="label" for="orgName">Organization Name</label>
+            <input id="orgName" class="input input--dark" type="text" placeholder="Name" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="purpose">Purpose</label>
+            <input id="purpose" class="input input--dark" type="text" placeholder="School ID" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="members">Members</label>
+            <input
+              id="members"
+              class="input input--dark"
+              type="text"
+              placeholder="Add comma between members name"
+            />
+          </div>
+
+          <div class="field">
+            <label class="label" for="adviser">Adviser</label>
+            <input id="adviser" class="input input--dark" type="text" placeholder="Adviser" />
+          </div>
+
+          <h2 class="upload-title">Upload Documents</h2>
+
+          <!-- Upload UI -->
+          <div class="upload-row">
+            <input
+              id="fileInput"
+              class="file-input"
+              type="file"
+              multiple
+              accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+            />
+
+            <button class="upload-btn" id="uploadBtn" type="button">
+              Upload Files
+            </button>
+          </div>
+
+        <!-- Submit application button -->
+<div class="form-footer">
+  <button class="btn btn--green" type="button">
+    Submit Application
+  </button>
+</div>
+
+
+          <ul class="file-list" id="fileList" aria-live="polite"></ul>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- only if you want the NAME to come from signup localStorage -->
+  <script src="js/shared-student.js"></script>
+
+  <!-- only needed for upload button + listing selected files -->
+  <script src="js/student-form.js"></script>
+</body>
+</html>
